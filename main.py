@@ -11,7 +11,6 @@ text = """
     10:        00900493        addi x9 x0 9
     14:        00940533        add x10 x8 x9
 """
-# input("pls input executable code and press enter:")
 
 import re
 # 通过正则表达式将hex code提取出来
