@@ -14,9 +14,11 @@ text = """
 # input("pls input executable code and press enter:")
 
 import re
-y = re.findall(":\s+([0-9a-fA-F]+)\s+",text)
-y = ["%s %s %s %s"%(i[:2],i[2:4],i[4:6],i[6:]) for i in y]
-print("\n".join(y))
+# 通过正则表达式将hex code提取出来
+hex_code_list = re.findall(":\s+([0-9a-fA-F]+)\s+",text)
+# 将hex code将转换为mem格式
+mem = ["%s %s %s %s"%(i[:2],i[2:4],i[4:6],i[6:]) for i in hex_code_list]
+print("\n".join(mem))
 
 # 运行之后结果如下
 """
